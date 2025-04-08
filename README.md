@@ -72,6 +72,6 @@ Into:
 
 This project is licensed under the terms of the [Apache License, Version 2.0](LICENSE)
 
-## Get involved and see the contributors
+## Get involved
 
-To learn how to contribute, check out the [CONTRIBUTING](CONTRIBUTING.md) file. You can also take a look at the [CONTRIBUTORS](CONTRIBUTORS.md) file to see who has helped out so far.
+Check out the [CONTRIBUTING](CONTRIBUTING.md) file to learn how to contribute, and the [CONTRIBUTORS](CONTRIBUTORS.md) file to see who’s helped make it happen.

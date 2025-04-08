@@ -1,6 +1,6 @@
 {
   "name": "html-assets-hash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds content-based hashes to HTML asset URLs to prevent browsers from loading outdated cached files.",
   "keywords": [
     "asset-versioning",
