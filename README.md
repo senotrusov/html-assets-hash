@@ -34,8 +34,11 @@ This placeholder acts as an intentional marker — only assets with `?v=` will b
 
 If a version string is already present (e.g. `?v=old1234`), it will be updated with the current hash. Assets without a `?v=` marker remain unchanged, giving you control over which URLs should be processed.
 
-* External URLs (like CDNs) are ignored  
-* Asset URLs with multiple query parameters (e.g. `?v=1234&foo=bar`) are not modified
+* External URLs (like CDNs) are ignored.
+
+* Asset URLs with multiple query parameters (e.g. `?v=1234&foo=bar`) are not modified.
+
+* Targeted `<script>` and `<link>` tags must not contain `<` or `>` characters within them (including in attribute values); such tags are skipped and not processed.
 
 For simplicity and zero dependencies, the HTML is parsed using regular expressions. While not a general-purpose solution for HTML parsing, it's reliable for this narrowly defined use case.
 
@@ -67,6 +70,17 @@ Into:
 <script src="app.js?v=a1b2c3d4"></script>
 <link href="styles.css?v=e5f6g7h8" rel="stylesheet">
 ```
+
+## Notes on security
+
+* This tool is intended to run only on **trusted input**, specifically well-formed HTML files.
+
+* It does **not** sanitize or restrict file access. A malicious HTML file could be crafted to:
+
+  * Enumerate files on the local system.
+  * Compute and exfiltrate partial SHA-256 hashes of local files.
+
+* Do **not** use this tool on untrusted or user-generated content.
 
 ## License
 
