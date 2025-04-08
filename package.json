@@ -1,6 +1,6 @@
 {
   "name": "html-assets-hash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds content-based hashes to HTML asset URLs to prevent browsers from loading outdated cached files.",
   "keywords": [
     "asset-versioning",
@@ -15,11 +15,16 @@
   ],
   "author": "Stanislav Senotrusov",
   "license": "Apache-2.0",
-  "repository": "github:senotrusov/html-assets-hash",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senotrusov/html-assets-hash.git"
+  },
   "bugs": "https://github.com/senotrusov/html-assets-hash/issues",
   "homepage": "https://github.com/senotrusov/html-assets-hash",
   "engines": {
     "node": ">=16.13.0"
   },
-  "bin": "bin/html-assets-hash.mjs"
+  "bin": {
+    "html-assets-hash": "bin/html-assets-hash.mjs"
+  }
 }
