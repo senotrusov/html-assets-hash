@@ -78,6 +78,7 @@ Into:
 * It does **not** sanitize or restrict file access. A malicious HTML file could be crafted to:
 
   * Enumerate files on the local system.
+ 
   * Compute and exfiltrate partial SHA-256 hashes of local files.
 
 * Do **not** use this tool on untrusted or user-generated content.
