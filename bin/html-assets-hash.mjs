@@ -57,7 +57,7 @@ function updateAssetVersions(htmlFilePath, basePath) {
     // Regex explanation:
     // * Matches <script> or <link> tags with src or href attributes that include a version parameter (?v)
     // * Uses named capture groups to extract parts of the tag: pre, url, and post.
-    const regex = /(?<pre><(?:script|link)(?= )[^>]*(?<= )(?:src|href) *= *(?<quote>["']))(?<url>.+?)\?v(?:=[A-Za-z0-9]*)?(?<post>\k<quote>(?=[ >]).*?>)/gi;
+    const regex = /(?<pre><(?:script|link)(?=\s)[^<>]*(?<=\s)(?:src|href)\s*=\s*(?<quote>["']))(?<url>[^"'<>?]+?)\?v(?:=[A-Za-z0-9]*)?(?<post>\k<quote>(?=[\s>])[^<>]*?>)/gmi;
     
     // Replace each asset URL with an updated version that includes a new hash.
     const updatedContent = fileContent.replace(regex, (match, ...args) => {
